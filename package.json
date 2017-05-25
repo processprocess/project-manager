@@ -18,8 +18,8 @@
     "stylus": "0.54.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "react-scripts start",
+    "start": "react-scripts build",
     "eject": "react-scripts eject"
   },
   "engines": {
