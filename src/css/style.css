@@ -1,0 +1,639 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+/* ---------- header nav styles ---------- */
+
+header {
+  width: 100%;
+}
+
+nav.top-nav {
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav.top-nav .left-items {
+  display: flex;
+  flex-direction: row;
+}
+
+nav.top-nav a {
+  padding: 10px 30px;
+  color: white;
+  text-decoration: none;
+}
+
+nav.top-nav a:hover {
+  background: red
+}
+
+nav.top-nav a.active-nav {
+  background: red
+}
+
+nav.top-nav .right-items {
+  display: flex;
+}
+
+nav.top-nav .right-items a span{
+  font-size: .75em;
+  font-weight: 400;
+}
+
+nav.top-nav .right-items a:hover{
+  color: red;
+  background: black;
+  text-decoration: underline;
+}
+
+.org-banner {
+  height: 225px;
+  background-color: black;
+}
+
+.org-banner .image-container {
+  background-image: url('../images/Project+Orphans-0833.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 30%;
+  width: 100%;
+  height: 100%;
+  opacity: .75;
+}
+
+.org-banner .text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: -225px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.org-banner .banner-conent {
+  margin-bottom: 1em;
+  color: white;
+}
+
+.org-banner p.org-name {
+  font-size: 3em;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}
+
+.org-banner p.org-subtitle {
+  font-weight: 400;
+  margin: 0;
+}
+
+nav.project-nav {
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+}
+
+nav.project-nav .center-items {
+  display: flex;
+  flex-direction: row;
+}
+
+nav.project-nav a {
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+nav.project-nav a:hover {
+  background: white;
+  color: black;
+}
+
+nav.project-nav a.active-nav {
+  background: white;
+  color: black;
+}
+
+nav.project-nav span {
+  align-self: center;
+  text-transform: uppercase;
+  color:white;
+  margin-right: 15px;
+  font-size: .5em;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* ---------- project styles ---------- */
+
+.projects-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.project-post {
+  background-color: rgb(238, 238, 238);
+  width: 350px;
+  min-width: 350px;
+  margin: 10px;
+  border-top: 3px solid red;
+  padding: 15px 20px 20px 20px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.project-post.draft {
+  border-top: 3px solid blue;
+}
+
+.project-post.in-progress {
+  border-top: 3px solid #00B997;
+}
+
+/*.project-post:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}*/
+
+.project-post .status {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  font-size: .65em;
+  color: red;
+}
+
+.project-post .status.draft {
+  color: blue;
+}
+
+.project-post .status.in-progress {
+  color: #00B997;
+}
+
+.project-name {
+  font-weight: 700;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.details-holder {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.detail-header {
+  font-weight: 700;
+  font-size: .85em;
+  margin-bottom: 5px;
+}
+
+.dash {
+  width: 15px;
+  height: 2px;
+  background: black;
+  margin-bottom: 2px;
+}
+
+.details-holder .detail {
+  font-size: 1.4em;
+  font-weight: 400
+}
+
+.project-post .desc {
+  font-weight: 300;
+  line-height: 1.25em;
+  margin-bottom: 10px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.project-post .manage-button {
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  border: 1px solid red;
+  padding: 8px 15px;
+  color: red;
+  text-transform: uppercase;
+  font-size: .7em;
+  font-weight: 700;
+  letter-spacing: .05em;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.project-post .manage-button.draft {
+  border: 1px solid blue;
+  color: blue;
+}
+
+.project-post .manage-button:hover {
+  color: white;
+  background: red;
+  cursor: pointer;
+}
+
+.project-post .manage-button.draft:hover {
+  background: blue;
+}
+
+.project-post .manage-button.in-progress {
+  border: 1px solid #00B997;
+  color: #00B997;
+}
+
+.project-post .manage-button.in-progress:hover {
+  background: #00B997;
+  color: white
+}
+
+.new-project {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid red;
+  background-color: rgb(238, 238, 238);
+  width: 350px;
+  min-width: 350px;
+  height: 175px;
+  margin: 10px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.new-project .message {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.new-project .new-project-button{
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: red;
+  letter-spacing: .05em;
+  border: 2px solid red;
+  border-radius: 15px;
+  padding: 10px 20px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.new-project:hover .new-project-button{
+  background: red;
+  color: white;
+}
+
+.new-project:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  cursor: pointer;
+}
+
+/* ---------- modal styles ---------- */
+
+.modal-style input,
+.modal-style textarea {
+  transition: .2s;
+  outline: none;
+  background: none;
+  border: 1px solid grey;
+  padding: 5px 10px;
+}
+
+.modal-style.disabled input,
+.modal-style.disabled textarea {
+  border: 1px solid rgba(75, 96, 249, 0);;
+  color:black;
+}
+
+.modal-style input:focus,
+.modal-style textarea:focus {
+  background: white;
+}
+
+.modal-style input::placeholder,
+.modal-style textarea::placeholder {
+  color: rgb(161, 161, 161);
+}
+
+.modal-style textarea {
+  padding: 5px 5px;
+}
+
+.back-drop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-style {
+  padding: 10px 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  background-color: rgb(245, 245, 245);
+  width: 400px;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+/*.modal-content-wrapper {
+  max-height: 600px;
+  overflow-y: scroll;
+}*/
+
+.modal-style.draft {
+  border-top: 3px solid blue;
+}
+
+.modal-style.listed {
+  border-top: 3px solid red;
+}
+
+.modal-style.in-progress {
+  border-top: 3px solid #00B997;
+}
+
+.model-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+.model-title {
+  color: grey;
+  font-size: 1.3em;
+}
+
+.model-close {
+  cursor: pointer;
+  font-size: 1.3em;
+  color: grey;
+}
+
+.model-close:hover {
+  color: rgb(205, 31, 0);
+}
+
+input.name-input {
+  width: 100%;
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+input.name-input.disabled {
+  /*width: 100%;*/
+  /*font-size: 1.8em;*/
+  /*margin-bottom: 30px;*/
+}
+
+.detail-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.detail {
+}
+
+input.detail-input {
+  font-size: 1.3em;
+  width: 100px;
+}
+
+.description-input {
+  font-size: .8em;
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.model-footer {
+  display: flex;
+  /*justify-content: flex-end;*/
+  border-top: 1px solid grey;
+  margin-bottom: 0px;
+}
+
+.form-footer {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.model-button {
+  transition: .2s;
+  margin: 10px 0px;
+  padding: 5px 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  font-size: .75em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: grey;
+}
+
+.delete-project {
+  margin-left: auto
+}
+
+.delete-project:hover {
+  color: white;
+  background: grey;
+}
+
+.save-draft {
+  color: blue;
+  border-color: blue;
+}
+
+.save-draft:hover {
+  color: white;
+  background: blue;
+}
+
+.list-project {
+  margin-right: 10px;
+  color: red;
+  border-color: red;
+}
+
+.list-project:hover {
+  color: white;
+  background: red;
+}
+
+fieldset {
+  border: none;
+}
+
+.applicants-wrapper {
+  margin-bottom: 30px;
+}
+
+.applicant-header {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.applicant {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.applicant img {
+  border-radius: 50%;
+  height: 75px;
+  display: inline-block;;
+}
+
+.applicant-details {
+  width:100%;
+  margin-left: 10px;
+}
+
+.applicant-details .name {
+  font-weight: 700;
+}
+
+.applicant-details .desc {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.applicant-buttons {
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.applicant-button {
+  transition: .2s;
+  padding: 3px 7px;
+  font-size: .65em;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: 700;
+  border: 1px grey solid;
+  border-radius: .75em;
+  color: grey;
+}
+
+.applicant-button.view {
+  margin-right: 5px;
+  border-color: red;
+  color: red;
+}
+
+.applicant-button.view:hover {
+  background: red;
+  color: white;
+}
+
+.applicant-button.hire {
+  border-color: #00B997;
+  color: #00B997;
+}
+
+.applicant-button.hire:hover {
+  background: #00B997;
+  color: white;
+}
+
+.applicant-button.delete {
+  margin-left: auto;
+}
+
+.applicant-button.delete:hover {
+  background: grey;
+  color: white;
+}
+
+.share-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgb(200, 200, 200);
+}
+
+.creative-wrapper {
+  margin: 20px 0;
+}
+
+.creative-info {
+  display: flex;
+}
+
+.creative-wrapper .picture {
+  border-radius: 50%;
+  height: 150px;
+}
+
+.creative-wrapper .name {
+  color: #00B997;
+  margin-top: 10px;
+}
+
+.creative-wrapper .creative-detail {
+  font-weight: 500;
+  font-size: .88em;
+}
+
+.creative-wrapper .applicant-buttons {
+  margin-top: 10px;
+}
+
+.creative-wrapper .applicant-buttons {
+  margin-top: 10px;
+}
+
+.modal-style.in-progress .model-footer {
+  padding:10px;
+}
